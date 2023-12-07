@@ -60,7 +60,7 @@ jobs:
   push-to-docker-hub:
     needs: build-fastgpt-docs-images
     runs-on: ubuntu-20.04
-    # if: github.repository == 'wlc002/FastGPT'
+    if: github.repository == 'wlc002/FastGPT'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -86,7 +86,7 @@ jobs:
   update-docs-image:
     needs: build-fastgpt-docs-images
     runs-on: ubuntu-20.04
-    # if: github.repository == 'wlc002/FastGPT'
+    if: github.repository == 'wlc002/FastGPT'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
