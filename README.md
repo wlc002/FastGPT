@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://fastgpt.run/"><img src="/.github/imgs/logo.svg" width="120" height="120" alt="fastgpt logo"></a>
+<a href="https://fastgpt.run/"><img src="/.github/imgs/logo.svg" width="120" height="120" alt="AI-genius logo"></a>
 
 # FastGPT
 
