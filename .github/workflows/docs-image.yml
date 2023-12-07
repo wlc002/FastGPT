@@ -6,8 +6,7 @@ on:
       - 'docSite/**'
     branches:
       - 'main'
-    tags:
-      - 'v0.0.6'
+
 jobs:
   build-fastgpt-docs-images:
     runs-on: ubuntu-20.04
