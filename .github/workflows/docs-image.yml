@@ -35,7 +35,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GHP_PAT }}
       - name: Set DOCKER_REPO_TAGGED based on branch or tag
         run: |
           if [[ "${{ github.ref_name }}" == "main" ]]; then
