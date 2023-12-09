@@ -7,7 +7,7 @@ enableGitInfo = false # N.B. .GitInfo does not currently function with git submo
 defaultContentLanguage = 'zh-cn'
 [languages]
   [languages.zh-cn]
-    title = "FastGPT"
+    title = "AI-Genius-GPT"
     languageName = "简体中文"
     #contentDir = "content/zh-cn"
     weight = 10

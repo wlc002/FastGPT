@@ -639,7 +639,7 @@
     "Dateset Desc": "提供手动输入、直接分段、LLM 自动处理和 CSV 等多种数据导入途径",
     "Docs": "文档",
     "FastGPT Ability": "{{title}} 能力",
-    "FastGPT Desc": "{{title}} 是一个基于 LLM 大语言模型的知识库问答系统，提供开箱即用的数据处理、模型调用等能力。同时可以通过 Flow 可视化进行工作流编排，从而实现复杂的问答场景！",
+    "FastGPT Desc": "{{title}} .是一个基于 LLM 大语言模型的知识库问答系统，提供开箱即用的数据处理、模型调用等能力。同时可以通过 Flow 可视化进行工作流编排，从而实现复杂的问答场景！",
     "Features": "特点",
     "Footer Developer": "开发者",
     "Footer Docs": "文档",
