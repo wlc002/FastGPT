@@ -6,6 +6,8 @@ on:
       - 'docSite/**'
     branches:
       - 'main'
+    tags:
+      - 'v*.*.*'
 
 jobs:
   build-fastgpt-docs-images:
