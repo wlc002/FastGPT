@@ -36,7 +36,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.GH_PAT }}
+          password: ${{ secrets.GHP_PAT }}
       - name: Set DOCKER_REPO_TAGGED based on branch or tag
         run: |
           if [[ "${{ github.ref_name }}" == "main" ]]; then
@@ -62,7 +62,7 @@ jobs:
   push-to-docker-hub:
     needs: build-fastgpt-images
     runs-on: ubuntu-20.04
-    if: github.repository == 'labring/FastGPT'
+    if: github.repository == 'wlc002/FastGPT'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -86,7 +86,7 @@ jobs:
         run: docker push ${{ secrets.DOCKER_IMAGE_NAME }}:${{env.IMAGE_TAG}}
   push-to-ali-hub:
     needs: build-fastgpt-images
-    if: github.repository == 'labring/FastGPT'
+    if: github.repository == 'wlc002/FastGPT'
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout code
