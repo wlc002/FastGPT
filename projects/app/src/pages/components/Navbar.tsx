@@ -21,38 +21,55 @@ const Navbar = () => {
   const { isOpen: isOpenMenu, onOpen: onOpenMenu, onClose: onCloseMenu } = useDisclosure();
   const { isPc } = useSystemStore();
   const menuList = [
-    ...(feConfigs?.concatMd
-      ? [
-          {
-            label: t('home.Commercial'),
-            key: 'Commercial',
-            onClick: () => {
-              window.open(
-                'https://fael3z0zfze.feishu.cn/share/base/form/shrcnRxj3utrzjywsom96Px4sud',
-                '_blank'
-              );
-            }
-          },
-          {
-            label: t('home.Community'),
-            key: 'community',
-            onClick: () => {
-              onOpenCommunity();
-            }
-          }
-        ]
-      : []),
-    ...(feConfigs?.docUrl
-      ? [
-          {
-            label: t('home.Docs'),
-            key: 'docs',
-            onClick: () => {
-              window.open(getDocPath('/docs/intro'));
-            }
-          }
-        ]
-      : [])
+    // ...(feConfigs?.concatMd
+    //   ? [
+    //     {
+    //       label: t('home.Commercial'),
+    //       key: 'Commercial',
+    //       onClick: () => {
+    //         window.open(
+    //           'https://fael3z0zfze.feishu.cn/share/base/form/shrcnRxj3utrzjywsom96Px4sud',
+    //           '_blank'
+    //         );
+    //       }
+    //     },
+    //     {
+    //       label: t('home.Community'),
+    //       key: 'community',
+    //       onClick: () => {
+    //         onOpenCommunity();
+    //       }
+    //     }
+    //   ]
+    //   : []),
+    {
+      label: t('home.Commercial'),
+      key: 'Commercial',
+      onClick: () => {
+        window.open(
+          'https://x1bt9fwo9nj.feishu.cn/share/base/form/shrcnnNLpAg8rpoDLBpwWJDemgh',
+          '_blank'
+        );
+      }
+    },
+    {
+      label: t('home.Community'),
+      key: 'community',
+      onClick: () => {
+        onOpenCommunity();
+      }
+    },
+    // ...(feConfigs?.docUrl
+    //   ? [
+    //     {
+    //       label: t('home.Docs'),
+    //       key: 'docs',
+    //       onClick: () => {
+    //         window.open(getDocPath('/docs/intro'));
+    //       }
+    //     }
+    //   ]
+    //   : [])
   ];
   const bgOpacity = useMemo(() => {
     const rate = scrollTop / 120;

@@ -49,7 +49,7 @@ function App({ Component, pageProps }: AppProps) {
         feConfigs: { scripts, isPlus, systemTitle }
       } = await clientInitData();
 
-      setTitle(systemTitle || 'FastGPT');
+      setTitle(systemTitle || 'AI吉尼');
 
       // log fastgpt
       !isPlus &&

@@ -52,11 +52,11 @@ const defaultSystemEnv: SystemEnvType = {
 };
 const defaultFeConfigs: FeConfigsType = {
   show_emptyChat: true,
-  show_git: true,
-  show_register: false,
+  show_git: false,
+  show_register: true,
   docUrl: 'https://doc.fastgpt.in',
   openAPIDocUrl: 'https://doc.fastgpt.in/docs/development/openapi',
-  systemTitle: 'FastGPT',
+  systemTitle: 'AI吉尼',
   limit: {
     exportLimitMinutes: 0
   },
@@ -101,13 +101,13 @@ export function setDefaultData(res?: ConfigFileType) {
     : defaultSystemEnv;
   global.feConfigs = res?.FeConfig
     ? {
-        concatMd: res?.FeConfig?.show_git
-          ? '* 项目开源地址: [FastGPT GitHub](https://github.com/labring/FastGPT)\n* 交流群: ![](https://doc.fastgpt.in/wechat-fastgpt.webp)'
-          : '',
-        ...defaultFeConfigs,
-        ...res.FeConfig,
-        isPlus: !!res.SystemParams?.pluginBaseUrl
-      }
+      concatMd: res?.FeConfig?.show_git
+        ? '* 项目开源地址: [FastGPT GitHub](https://github.com/labring/FastGPT)\n* 交流群: ![](https://doc.fastgpt.in/wechat-fastgpt.webp)'
+        : '',
+      ...defaultFeConfigs,
+      ...res.FeConfig,
+      isPlus: !!res.SystemParams?.pluginBaseUrl
+    }
     : defaultFeConfigs;
 
   global.chatModels = res?.ChatModels || defaultChatModels;
@@ -151,26 +151,26 @@ function getModelPrice() {
   global.priceMd = `| 计费项 | 价格: 元/ 1K tokens(包含上下文)|
 | --- | --- |
 ${global.vectorModels
-  ?.map((item) => `| 索引-${item.name} | ${formatPrice(item.price, 1000)} |`)
-  .join('\n')}
+      ?.map((item) => `| 索引-${item.name} | ${formatPrice(item.price, 1000)} |`)
+      .join('\n')}
 ${global.chatModels
-  ?.map((item) => `| 对话-${item.name} | ${formatPrice(item.price, 1000)} |`)
-  .join('\n')}
+      ?.map((item) => `| 对话-${item.name} | ${formatPrice(item.price, 1000)} |`)
+      .join('\n')}
 ${global.qaModels
-  ?.map((item) => `| 文件QA拆分-${item.name} | ${formatPrice(item.price, 1000)} |`)
-  .join('\n')}
+      ?.map((item) => `| 文件QA拆分-${item.name} | ${formatPrice(item.price, 1000)} |`)
+      .join('\n')}
 ${global.cqModels
-  ?.map((item) => `| 问题分类-${item.name} | ${formatPrice(item.price, 1000)} |`)
-  .join('\n')}
+      ?.map((item) => `| 问题分类-${item.name} | ${formatPrice(item.price, 1000)} |`)
+      .join('\n')}
 ${global.extractModels
-  ?.map((item) => `| 内容提取-${item.name} | ${formatPrice(item.price, 1000)} |`)
-  .join('\n')}
+      ?.map((item) => `| 内容提取-${item.name} | ${formatPrice(item.price, 1000)} |`)
+      .join('\n')}
 ${global.qgModels
-  ?.map((item) => `| 下一步指引-${item.name} | ${formatPrice(item.price, 1000)} |`)
-  .join('\n')}
+      ?.map((item) => `| 下一步指引-${item.name} | ${formatPrice(item.price, 1000)} |`)
+      .join('\n')}
 ${global.audioSpeechModels
-  ?.map((item) => `| 语音播放-${item.name} | ${formatPrice(item.price, 1000)} |`)
-  .join('\n')}
+      ?.map((item) => `| 语音播放-${item.name} | ${formatPrice(item.price, 1000)} |`)
+      .join('\n')}
 ${`| 语音输入-${global.whisperModel.name} | ${global.whisperModel.price}/分钟 |`}
 `;
   console.log(global.priceMd);

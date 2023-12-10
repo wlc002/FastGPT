@@ -100,7 +100,7 @@ const Footer = () => {
           {t('home.FastGPT Desc', { title: feConfigs.systemTitle })}
         </Box>
       </Box>
-      {list.map((item) => (
+      {/* {list.map((item) => (
         <Box key={item.label} w={'200px'} mt={[5, 0]}>
           <Box color={'myGray.500'}>{item.label}</Box>
           {item.child.map((child) => (
@@ -115,7 +115,7 @@ const Footer = () => {
             </Box>
           ))}
         </Box>
-      ))}
+      ))} */}
       {isOpen && <CommunityModal onClose={onClose} />}
     </Box>
   );

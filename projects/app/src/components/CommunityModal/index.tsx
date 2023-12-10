@@ -7,6 +7,8 @@ import { feConfigs } from '@/web/common/system/staticData';
 
 const CommunityModal = ({ onClose }: { onClose: () => void }) => {
   const { t } = useTranslation();
+  // * 客服微信: [FastGPT GitHub](https://github.com/labring/FastGPT)\n
+  const modalContent = "* 客服微信: ![](/imgs/wechat-l.jpg)";
   return (
     <MyModal
       isOpen={true}
@@ -15,7 +17,7 @@ const CommunityModal = ({ onClose }: { onClose: () => void }) => {
       title={t('home.Community')}
     >
       <ModalBody textAlign={'center'}>
-        <Markdown source={feConfigs?.concatMd || ''} />
+        <Markdown source={modalContent} />
       </ModalBody>
 
       <ModalFooter>
