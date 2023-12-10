@@ -1,13 +1,13 @@
 name: Build FastGPT docs images and copy image to docker hub
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - 'docSite/**'
-    branches:
-      - 'main'
-    tags:
-      - 'v*.*.*'
+# on:
+#   workflow_dispatch:
+#   push:
+#     paths:
+#       - 'docSite/**'
+#     branches:
+#       - 'main'
+#     tags:
+#       - 'v*.*.*'
 
 jobs:
   build-fastgpt-docs-images:
