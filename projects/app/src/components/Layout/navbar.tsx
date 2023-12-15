@@ -57,14 +57,14 @@ const Navbar = ({ unread }: { unread: number }) => {
       },
       ...(feConfigs?.show_appStore
         ? [
-            {
-              label: t('navbar.Store'),
-              icon: 'appStoreLight',
-              activeIcon: 'appStoreFill',
-              link: '/appStore',
-              activeLink: ['/appStore']
-            }
-          ]
+          {
+            label: t('navbar.Store'),
+            icon: 'appStoreLight',
+            activeIcon: 'appStoreFill',
+            link: '/appStore',
+            activeLink: ['/appStore']
+          }
+        ]
         : []),
       {
         label: t('navbar.Account'),
@@ -129,18 +129,18 @@ const Navbar = ({ unread }: { unread: number }) => {
             {...itemStyles}
             {...(item.activeLink.includes(router.pathname)
               ? {
-                  color: 'myBlue.700',
-                  bg: 'white !important',
-                  boxShadow: '1px 1px 10px rgba(0,0,0,0.2)'
-                }
+                color: 'myBlue.700',
+                bg: 'white !important',
+                boxShadow: '1px 1px 10px rgba(0,0,0,0.2)'
+              }
               : {
-                  color: 'myGray.500',
-                  backgroundColor: 'transparent'
-                })}
+                color: 'myGray.500',
+                backgroundColor: 'transparent'
+              })}
             {...(item.link !== router.asPath
               ? {
-                  onClick: () => router.push(item.link)
-                }
+                onClick: () => router.push(item.link)
+              }
               : {})}
           >
             <MyIcon
@@ -175,7 +175,7 @@ const Navbar = ({ unread }: { unread: number }) => {
           </Link>
         </Box>
       )}
-      {feConfigs?.docUrl && (
+      {/* {feConfigs?.docUrl && (
         <MyTooltip label={t('home.Docs')} placement={'right-end'}>
           <Box
             {...itemStyles}
@@ -188,7 +188,7 @@ const Navbar = ({ unread }: { unread: number }) => {
             <MyIcon name={'common/courseLight'} width={'26px'} height={'26px'} />
           </Box>
         </MyTooltip>
-      )}
+      )} */}
       {feConfigs?.show_git && (
         <MyTooltip label={`Git Star: ${gitStar}`} placement={'right-end'}>
           <Link
