@@ -44,6 +44,7 @@ export type getHistoriesProps = {
 };
 
 export type UpdateHistoryProps = {
+  appId: string;
   chatId: string;
   customTitle?: string;
   top?: boolean;
@@ -52,6 +53,7 @@ export type UpdateHistoryProps = {
 };
 
 export type DelHistoryProps = {
+  appId: string;
   chatId: string;
   shareId?: string;
   outLinkUid?: string;
@@ -64,8 +66,9 @@ export type ClearHistoriesProps = {
 
 /* -------- chat item ---------- */
 export type DeleteChatItemProps = {
+  appId: string;
   chatId: string;
-  contentId: string;
+  contentId?: string;
   shareId?: string;
   outLinkUid?: string;
 };
